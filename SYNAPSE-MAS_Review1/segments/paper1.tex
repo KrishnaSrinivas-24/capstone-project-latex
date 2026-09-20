@@ -1,0 +1,57 @@
+\begin{frame}{Literature Review (Paper 1)}
+\begin{columns}[T]
+  \begin{column}{0.25\textwidth}
+    \begin{block}{Title of the paper \cite{ref1}}
+      \tiny \textbf{Shared Selective Persistent Memory for Agentic LLM Systems}\\[2pt] Sanjana Pedada, Aditya Dhavala, Neelraj Patil (2026).\\[2pt] Problem: preserve reusable context across multi-turn agent sessions without retaining irrelevant reasoning history.
+    \end{block}
+    \vspace{0.12cm}
+    \begin{block}{Main contributions}
+      \tiny
+      \begin{itemize}\setlength\itemsep{1pt}
+      \item Selective retention of task specifications, data schemas, tool configurations and output constraints.
+\item Shared persistent workspaces with role-based access.
+\item Separates reusable context from session-specific reasoning traces.
+\item Introduces zero-token data refresh for recurring updates.
+      \end{itemize}
+    \end{block}
+    \vspace{0.12cm}
+    \begin{block}{Inputs and Outputs}
+      \tiny Agent interaction/task context and reusable workspace information are processed into persistent shared memory; the output is reusable contextual memory and refreshed artifacts.
+    \end{block}
+  \end{column}
+
+  \begin{column}{0.4\textwidth}
+    \begin{block}{Methodology}
+    \tiny
+    \begin{center}
+    \textbf{Selective shared persistent memory}
+    \end{center}
+    \begin{itemize}\setlength\itemsep{1pt}
+    \item Identify reusable context categories.
+\item Discard session-specific traces and persist selected knowledge.
+\item Reuse stored context across sessions/users.
+\item Evaluate task completion and refresh efficiency.
+    \end{itemize}
+    \end{block}
+
+    \begin{block}{Tools and Technology used}
+      \tiny LLM-based agentic code-generation system; persistent memory/workspace; git-versioned artifacts; heterogeneous data sources; role-based access control.
+    \end{block}
+  \end{column}
+
+  \begin{column}{0.25\textwidth}
+    \begin{block}{Summary of Results}
+      \tiny \textbf{96\%} task completion with memory vs. 79\% without memory and 71\% with full history in the reported enterprise scenarios. Zero-token refresh reduced task time by 14$\times$; summary-driven generation reduced token cost by 97$\times$.
+    \end{block}
+    \vspace{0.12cm}
+    \begin{block}{Major Findings}
+      \tiny
+      \begin{itemize}\setlength\itemsep{1pt}
+      \item Memory quality matters more than memory quantity.
+\item Full-history persistence can degrade performance because of stale traces.
+\item Selective memory supports collaborative reuse and efficiency.
+      \end{itemize}
+    \end{block}
+  \end{column}
+  \end{columns}
+\end{frame}

@@ -1,0 +1,57 @@
+\begin{frame}{Literature Review (Paper 2)}
+\begin{columns}[T]
+  \begin{column}{0.25\textwidth}
+    \begin{block}{Title of the paper \cite{ref2}}
+      \tiny \textbf{Governed Shared Memory for Multi-Agent LLM Systems}\\[2pt] Yanki Margalit, Nurit Cohen-Inger, Erni Avram, Ran Taig, Oded Margalit (2026).\\[2pt] Problem: shared multi-agent memory can suffer from unauthorized leakage, stale propagation, contradictions and loss of provenance.
+    \end{block}
+    \vspace{0.12cm}
+    \begin{block}{Main contributions}
+      \tiny
+      \begin{itemize}\setlength\itemsep{1pt}
+      \item Formalizes the fleet-memory problem.
+\item Defines scoped retrieval and temporal supersession.
+\item Adds provenance tracking and policy-governed propagation.
+\item Evaluates governance through a reproducible harness.
+      \end{itemize}
+    \end{block}
+    \vspace{0.12cm}
+    \begin{block}{Inputs and Outputs}
+      \tiny Agent/fleet memory is admitted and propagated under scope, temporal and provenance controls; outputs are governed shared memory with traceable derivations.
+    \end{block}
+  \end{column}
+
+  \begin{column}{0.4\textwidth}
+    \begin{block}{Methodology}
+    \tiny
+    \begin{center}
+    \textbf{Governed shared-memory service + evaluation harness}
+    \end{center}
+    \begin{itemize}\setlength\itemsep{1pt}
+    \item Define four governance failure modes.
+\item Apply scope and propagation policies.
+\item Track writer identity and derivation lineage.
+\item Test governance behaviour under live service conditions.
+    \end{itemize}
+    \end{block}
+
+    \begin{block}{Tools and Technology used}
+      \tiny MemClaw multi-tenant memory service; ArgusFleet evaluation harness; scoped retrieval; provenance and policy controls.
+    \end{block}
+  \end{column}
+
+  \begin{column}{0.25\textwidth}
+    \begin{block}{Summary of Results}
+      \tiny Reported 100\% reconstruction of depth-four provenance chains with correct writer identity and zero cross-fleet leakage under the tested conditions. The study also exposed scope-enforcement and pipeline-ordering issues.
+    \end{block}
+    \vspace{0.12cm}
+    \begin{block}{Major Findings}
+      \tiny
+      \begin{itemize}\setlength\itemsep{1pt}
+      \item Long-context retrieval alone is insufficient for governed shared memory.
+\item Governance must be explicit at the systems level.
+\item Pipeline ordering can affect contradiction handling.
+      \end{itemize}
+    \end{block}
+  \end{column}
+  \end{columns}
+\end{frame}

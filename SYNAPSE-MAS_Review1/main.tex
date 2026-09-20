@@ -1,0 +1,88 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Boadilla}
+\definecolor{MyUnivGreen}{RGB}{0,115,103}
+\definecolor{MyUnivLight}{RGB}{229,242,240}
+\definecolor{MyUnivRed}{RGB}{170,50,50}
+\usecolortheme[named=MyUnivGreen]{structure}
+\usefonttheme{serif}
+\usepackage{cite}
+\usepackage[table]{xcolor}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+\usepackage{ragged2e}
+\logo{\includegraphics[width=3.5cm,keepaspectratio]{images/logo/school_logo.png}}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{block title}{bg=MyUnivLight,fg=black}
+\setbeamercolor{block body}{bg=white,fg=black}
+\setbeamercolor{alertblock title}{bg=MyUnivRed!18,fg=MyUnivRed}
+\setbeamercolor{alertblock body}{bg=MyUnivRed!5,fg=black}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+\setlist[itemize]{leftmargin=*,itemsep=1pt,topsep=2pt}
+\setlist[enumerate]{leftmargin=*,itemsep=1pt,topsep=2pt}
+
+\AtBeginSection[]{
+    \begin{frame}{Outline}
+        \tableofcontents[currentsection]
+    \end{frame}}
+
+\title[Capstone Project Introduction]{Review 1\\PROJ2999 Capstone Project Introduction}
+\subtitle{\textbf{SYNAPSE-MAS: Shared Intelligent Memory Architecture for Multi-Agent LLM Systems}}
+\author[Team No.]{Krishna Srinivas \and Aman Tej \and Sanjay Ramaswamy \and Ram Koushik\\[1mm]\small Guide: Dr. Srinivasa L. Chakravarthy}
+\institute[GSCSE, GITAM]{Department of Artificial Intelligence and Data Science\\GITAM School of CSE\\GITAM Deemed to be University, Visakhapatnam}
+\date{September 2026}
+\titlegraphic{\includegraphics[width=5cm]{images/logo/school_logo.png}}
+
+\begin{document}
+{\logo{}
+\begin{frame}
+\titlepage
+\end{frame}}
+
+\section{Introduction}
+\input{segments/1_intro}
+
+\section{Literature Review}
+\input{segments/2i_lit_review_Paper1}
+\input{segments/paper1}
+\input{segments/paper2}
+\input{segments/paper3}
+\input{segments/paper4}
+\input{segments/paper5}
+\input{segments/paper6}
+
+\section{Summary of Literature Review}
+\input{segments/2_lit}
+
+\section{Research Gaps}
+\input{segments/3_gaps}
+
+\section{Problem Statement}
+\input{segments/4_prob}
+
+\section{Research Objectives}
+\input{segments/5_obj}
+
+\section{Workplan and Proposed Timeline}
+\input{segments/7_time}
+
+\section{Action Plan}
+\input{segments/8_conclude}
+
+\section*{References}
+\begin{frame}[allowframebreaks]{References}
+\scriptsize
+\bibliographystyle{unsrt}
+\bibliography{ref}
+\end{frame}
+
+\section{Disclosure Statements}
+\input{segments/9_disclosure}
+
+\end{document}

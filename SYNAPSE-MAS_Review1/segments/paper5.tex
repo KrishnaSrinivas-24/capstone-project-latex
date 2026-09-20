@@ -1,0 +1,60 @@
+\begin{frame}{Literature Review (Paper 5)}
+\begin{columns}[T]
+  \begin{column}{0.25\textwidth}
+    \begin{block}{Title of the paper \cite{ama26}}
+      \tiny \textbf{AMA: Adaptive Memory via Multi-Agent Collaboration}\\[2pt] arXiv:2601.20352 (2026).\\[2pt] Problem: multi-agent systems need memory that can adapt to task context and uncertainty instead of relying on a fixed memory schema.
+    \end{block}
+    \vspace{0.12cm}
+    \begin{block}{Main contributions}
+      \tiny
+      \begin{itemize}\setlength\itemsep{1pt}
+      \item Introduces explicit memory lifecycle stages across formation and update.
+\item Uses varying retrieval granularity and query routing.
+\item Incorporates judgement, retry and conflict detection.
+\item Supports refresh and targeted memory update when evidence is insufficient.
+      \end{itemize}
+    \end{block}
+    \vspace{0.12cm}
+    \begin{block}{Inputs and Outputs}
+      \tiny Agent experience, task queries and evidence are transformed into adaptive memory updates and context-specific retrieval decisions.
+    \end{block}
+  \end{column}
+
+  \begin{column}{0.4\textwidth}
+    \begin{block}{Methodology}
+    \tiny
+    \begin{center}
+    \textbf{Adaptive memory lifecycle}
+    \end{center}
+    \begin{itemize}\setlength\itemsep{1pt}
+    \item Extract reusable experience from agent actions.
+\item Route retrieval based on task query and memory granularity.
+\item Judge reliability and sufficiency of evidence.
+\item Refresh or revise memory when conflicts or gaps emerge.
+    \end{itemize}
+    \end{block}
+
+    \begin{block}{Tools and Technology used}
+      \tiny Multi-agent collaboration patterns; adaptive retrieval; lifecycle-based memory control; evidence-aware update logic.
+    \end{block}
+  \end{column}
+
+  \begin{column}{0.25\textwidth}
+    \begin{block}{Summary of Results}
+      \tiny The paper highlights adaptive memory as a dynamic lifecycle, where agents decide when to retrieve, when to retry and when to revise memory based on evidence quality.
+    \end{block}
+    \vspace{0.12cm}
+    \begin{block}{Major Findings}
+      \tiny
+      \begin{itemize}\setlength\itemsep{1pt}
+      \item Memory must adapt to task context and uncertainty.
+\item Retrieval should not be fixed at one granularity.
+\item Judgement and refresh are necessary for durable memory quality.
+      \end{itemize}
+    \end{block}
+    \begin{alertblock}{SYNAPSE Adapts}
+      \tiny SYNAPSE adopts the lifecycle idea as formation $\rightarrow$ selective admission $\rightarrow$ judgement $\rightarrow$ conflict resolution $\rightarrow$ consolidation $\rightarrow$ evolution.
+    \end{alertblock}
+  \end{column}
+  \end{columns}
+\end{frame}

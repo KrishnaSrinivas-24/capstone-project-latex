@@ -1,0 +1,60 @@
+\begin{frame}{Literature Review (Paper 6)}
+\begin{columns}[T]
+  \begin{column}{0.25\textwidth}
+    \begin{block}{Title of the paper \cite{claimplane26}}
+      \tiny \textbf{Claim Plane: Enforceable Change Intents and Dynamic Scope}\\[2pt] arXiv:2607.21909 (2026).\\[2pt] Problem: concurrent agents need a disciplined mechanism for deciding whether a write or change should be admitted under ambiguity or conflict.
+    \end{block}
+    \vspace{0.12cm}
+    \begin{block}{Main contributions}
+      \tiny
+      \begin{itemize}\setlength\itemsep{1pt}
+      \item Defines pre-write admission and intent tracking.
+\item Emphasizes fail-closed behavior under ambiguity.
+\item Supports change scope and version-aware enforcement.
+\item Links provenance to write control decisions.
+      \end{itemize}
+    \end{block}
+    \vspace{0.12cm}
+    \begin{block}{Inputs and Outputs}
+      \tiny Proposed change intents, scope constraints and provenance signals are evaluated before a write is accepted; the output is an enforceable update or rejection decision.
+    \end{block}
+  \end{column}
+
+  \begin{column}{0.4\textwidth}
+    \begin{block}{Methodology}
+    \tiny
+    \begin{center}
+    \textbf{Deterministic write admission}
+    \end{center}
+    \begin{itemize}\setlength\itemsep{1pt}
+    \item Define the intended change before write execution.
+\item Validate scope and version constraints.
+\item Refuse ambiguous or unsafe updates.
+\item Preserve lineage and provenance metadata.
+    \end{itemize}
+    \end{block}
+
+    \begin{block}{Tools and Technology used}
+      \tiny Deterministic scope enforcement, change-intent governance, version tracking, provenance-aware update control, fail-closed decision logic.
+    \end{block}
+  \end{column}
+
+  \begin{column}{0.25\textwidth}
+    \begin{block}{Summary of Results}
+      \tiny The paper presents a strong engineering principle: when intent is uncertain, the correct system behavior is conservative rejection rather than unsafe propagation.
+    \end{block}
+    \vspace{0.12cm}
+    \begin{block}{Major Findings}
+      \tiny
+      \begin{itemize}\setlength\itemsep{1pt}
+      \item Intent-aware admission is critical in concurrent settings.
+\item Provenance and versioning are not optional extras.
+\item Fail-closed behavior improves reliability under ambiguity.
+      \end{itemize}
+    \end{block}
+    \begin{alertblock}{SYNAPSE Adapts}
+      \tiny SYNAPSE uses the same principle for memory-write governance, conflict admission, lineage tracking and controlled memory evolution.
+    \end{alertblock}
+  \end{column}
+  \end{columns}
+\end{frame}

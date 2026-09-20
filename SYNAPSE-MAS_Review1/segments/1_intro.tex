@@ -1,0 +1,77 @@
+\begin{frame}{Multi-Agent Systems Need Memory}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\begin{block}{Why the problem matters}
+\begin{itemize}
+\item Specialized agents divide complex tasks and accumulate useful experience in parallel.
+\item Conventional stateless agents lose that experience across sessions.
+\item Repeated rediscovery wastes computation, tokens and time.
+\end{itemize}
+\end{block}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{alertblock}{Observed failure modes}
+\begin{itemize}
+\item Stale or contradictory memory may be reused.
+\item Cross-agent knowledge transfer is weak and ad hoc.
+\item Provenance, scope and consistency are difficult to govern.
+\end{itemize}
+\end{alertblock}
+\end{column}
+\end{columns}
+\vspace{3mm}
+\centering\large\textbf{The research need is a shared, selective and evolving memory layer.}
+\end{frame}
+
+\begin{frame}{Why Existing Approaches Fall Short}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.31\textwidth}
+\begin{block}{Stateless}
+No persistent experience, no long-horizon continuity.
+\end{block}
+\end{column}
+\begin{column}{0.31\textwidth}
+\begin{block}{Retrieval-only / RAG}
+Useful for access to stored context, but not inherently designed for memory admission, conflict resolution or evolution.
+\end{block}
+\end{column}
+\begin{column}{0.31\textwidth}
+\begin{block}{Static shared memory}
+Shared state can become stale, noisy or contradictory without lifecycle control and governance.
+\end{block}
+\end{column}
+\end{columns}
+\vspace{3mm}
+\begin{block}{The missing capability}
+A memory architecture that can decide what to remember, what to reject, what to retrieve, and how to reconcile conflicting knowledge over time.
+\end{block}
+\end{frame}
+
+\begin{frame}{Research Question}
+\begin{alertblock}{Research Question}
+\emph{``Can a selective, persistent and evolving shared-memory architecture improve the long-horizon performance, knowledge transfer and consistency of multi-agent LLM systems compared with conventional stateless and retrieval-only approaches?''}
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{SYNAPSE Architecture Concept}
+\begin{center}
+\begin{tikzpicture}[node distance=12mm, every node/.style={font=\scriptsize,align=center},
+box/.style={draw,rounded corners,minimum height=10mm,minimum width=3.0cm,fill=MyUnivLight},
+arrow/.style={-{Latex[length=2mm]},thick}]
+\node[box] (agents) {Agents};
+\node[box, below=of agents] (a2a) {A2A Communication Plane};
+\node[box, below=of a2a] (iface) {SYNAPSE Memory Interface};
+\node[box, below=of iface] (intel) {Memory Intelligence};
+\node[box, below=of intel] (substrate) {Shared Memory Substrate};
+\draw[arrow] (agents)--(a2a);
+\draw[arrow] (a2a)--(iface);
+\draw[arrow] (iface)--(intel);
+\draw[arrow] (intel)--(substrate);
+\end{tikzpicture}
+\end{center}
+\vspace{2mm}
+\begin{block}{Key interpretation}
+\textbf{A2A = talk now.}\quad\textbf{SYNAPSE = remember and reuse.}
+Agents may communicate directly, while SYNAPSE selectively preserves reusable knowledge and governs evolution across sessions.
+\end{block}
+\end{frame}

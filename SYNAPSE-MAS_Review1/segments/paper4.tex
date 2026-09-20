@@ -1,0 +1,57 @@
+\begin{frame}{Literature Review (Paper 4)}
+\begin{columns}[T]
+  \begin{column}{0.25\textwidth}
+    \begin{block}{Title of the paper \cite{ref4}}
+      \tiny \textbf{Mesh Memory Protocol: Semantic Infrastructure for Multi-Agent LLM Systems}\\[2pt] Hongwei Xu (2026).\\[2pt] Problem: agents collaborating across sessions need a semantic protocol for deciding what peer knowledge to accept, tracing its origin and preserving useful knowledge after restart.
+    \end{block}
+    \vspace{0.12cm}
+    \begin{block}{Main contributions}
+      \tiny
+      \begin{itemize}\setlength\itemsep{1pt}
+      \item Defines field-level rather than whole-message admission.
+\item Provides inter-agent lineage for claims.
+\item Stores the receiver's role-evaluated understanding rather than raw peer signals.
+\item Specifies a semantic infrastructure layer for cross-session collaboration.
+      \end{itemize}
+    \end{block}
+    \vspace{0.12cm}
+    \begin{block}{Inputs and Outputs}
+      \tiny Peer cognitive memory is evaluated field-by-field, linked to provenance/lineage, then transformed into receiver-side persistent memory for later reuse.
+    \end{block}
+  \end{column}
+
+  \begin{column}{0.4\textwidth}
+    \begin{block}{Methodology}
+    \tiny
+    \begin{center}
+    \textbf{Mesh Memory Protocol (MMP)}
+    \end{center}
+    \begin{itemize}\setlength\itemsep{1pt}
+    \item CAT7 represents Cognitive Memory Blocks.
+\item SVAF evaluates fields against role-indexed anchors.
+\item Content-hash parents/ancestors provide lineage.
+\item Remix stores the receiver's evaluated understanding.
+    \end{itemize}
+    \end{block}
+
+    \begin{block}{Tools and Technology used}
+      \tiny Cognitive Memory Blocks (CMB); CAT7 schema; SVAF admission; content-hash lineage; receiver-side remix; agent identity and persistent memory.
+    \end{block}
+  \end{column}
+
+  \begin{column}{0.25\textwidth}
+    \begin{block}{Summary of Results}
+      \tiny The paper reports three reference deployments in which autonomous agents collaborate across sessions using the specified semantic memory protocol.
+    \end{block}
+    \vspace{0.12cm}
+    \begin{block}{Major Findings}
+      \tiny
+      \begin{itemize}\setlength\itemsep{1pt}
+      \item Shared memory should not blindly copy peer messages.
+\item Admission, provenance and receiver-side interpretation are distinct requirements.
+\item This directly supports SYNAPSE's selective-admission and lineage design.
+      \end{itemize}
+    \end{block}
+  \end{column}
+  \end{columns}
+\end{frame}

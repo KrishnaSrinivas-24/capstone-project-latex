@@ -1,0 +1,40 @@
+\begin{frame}{Project Objectives}
+\begin{exampleblock}{Objectives}
+\begin{itemize}[leftmargin=1.5em,itemsep=4pt,topsep=4pt]
+\item Design and implement a shared memory architecture supporting persistent episodic and semantic memory with contextual retrieval.
+\item Develop selective memory formation and evolution mechanisms for relevance-based admission, redundancy reduction, conflict resolution, consolidation and updating/evolution.
+\item Evaluate SYNAPSE-MAS against the stateless baseline, the retrieval-only / RAG baseline and the static/shared-memory baseline using task performance, retrieval quality, memory efficiency, cross-agent knowledge transfer and consistency.
+\end{itemize}
+\end{exampleblock}
+\vspace{3mm}
+\begin{block}{Evaluation metrics}
+Measured outcomes include task performance, retrieval quality, memory efficiency, cross-agent knowledge transfer, consistency, token usage, latency and storage growth.
+\end{block}
+\end{frame}
+
+\begin{frame}{Proposed System Direction -- SYNAPSE-MAS}
+\centering
+\begin{tikzpicture}[scale=.82,transform shape,node distance=6mm and 7mm, every node/.style={font=\scriptsize,align=center},
+box/.style={draw,rounded corners,minimum height=9mm,text width=2.8cm,fill=MyUnivLight},
+agent/.style={draw,rounded corners,minimum height=8mm,text width=1.7cm,fill=white},
+arrow/.style={-{Latex[length=2mm]},thick}]
+\node[agent] (planner) {Planner /\\Orchestrator};
+\node[agent,left=of planner] (research) {Research\\Agent};
+\node[agent,right=of planner] (builder) {Builder\\Agent};
+\node[agent,right=of builder] (critic) {Critic /\\Validator};
+\node[box,below=12mm of planner,xshift=-2.8cm] (interface) {SYNAPSE Memory Interface};
+\node[box,right=5mm of interface] (intel) {Memory Intelligence};
+\node[box,right=5mm of intel] (store) {Shared Memory Substrate};
+\node[box,below=7mm of intel,text width=3.0cm] (eval) {Evaluation + Feedback};
+\draw[arrow] (research)--(interface);
+\draw[arrow] (planner)--(intel);
+\draw[arrow] (builder)--(intel);
+\draw[arrow] (critic)--(store);
+\draw[arrow] (interface)--(intel);
+\draw[arrow] (intel)--(store);
+\draw[arrow] (intel)--(eval);
+\draw[arrow] (eval.east) to[bend left=25] (store.south);
+\end{tikzpicture}
+\vspace{1mm}
+\small\textbf{Key idea:} A2A supports communication, while SYNAPSE governs the durable memory plane for retrieval, validation, conflict handling and memory evolution.
+\end{frame}
