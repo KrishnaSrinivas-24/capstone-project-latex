@@ -1,10 +1,33 @@
-\begin{frame}{Literature Review: Selection Strategy}
-\begin{block}{Review-I requirement}
-The GITAM template asks for \textbf{4--6 full-length papers}, one detailed slide per paper for at least four papers, followed by a comparison table.
+\begin{frame}{Literature Review: Overview}
+\begin{block}{Focus of the review}
+This review examines how multi-agent LLM systems communicate, share knowledge and maintain useful memory across tasks and sessions.
 \end{block}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\begin{block}{Themes across the literature}
 \begin{itemize}
-\item Six papers form the core research set for this review.
-\item They span memory lifecycle, shared state, architectural framing, governance and conflict handling.
-\item The review supports the identification of research gaps rather than a generic bibliography list.
+\item \textbf{Memory formation:} deciding what experience is worth retaining.
+\item \textbf{Shared memory:} enabling agents to access common knowledge safely.
+\item \textbf{Architecture:} organizing memory hierarchy, access and consistency.
+\item \textbf{Governance:} controlling scope, provenance, ownership and updates.
 \end{itemize}
+\end{block}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{block}{Six-paper review path}
+\begin{itemize}
+\item Selective persistent memory
+\item Governed shared memory
+\item Computer-architecture perspective
+\item Mesh memory protocol
+\item Adaptive memory lifecycle
+\item Change-intent and write governance
+\end{itemize}
+\end{block}
+\end{column}
+\end{columns}
+\vspace{2mm}
+\begin{alertblock}{Review direction}
+The detailed review moves from communication and shared state to selective admission, provenance, conflict handling and long-term memory evolution. The final summary compares the papers and identifies the gap addressed by SYNAPSE-MAS.
+\end{alertblock}
 \end{frame}
